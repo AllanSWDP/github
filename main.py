@@ -1,9 +1,11 @@
-from flask import flask
+from flask import Flask
 
-app = flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
     return 'Hello World!'
 
-# app.run(port=5008,debug=True)
+@app.route('/about')
+def about():
+    return 'About Page'
